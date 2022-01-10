@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
 
     override fun onClick(view: View?) {
         if(view?.id == R.id.btn_calculate){
-            var inputLen = edtLength.text.toString().trim()
-            var inputWidth = edtWidth.text.toString().trim()
-            var inputHeight = edtHeight.text.toString().trim()
+            val inputLen = edtLength.text.toString().trim()
+            val inputWidth = edtWidth.text.toString().trim()
+            val inputHeight = edtHeight.text.toString().trim()
 
             var isEmptyFields = false
             var isInvalidDouble = false
@@ -49,9 +49,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
                 edtHeight.error = "Field ini tidak boleh kosong"
             }
 
-            var length = convertToDouble(inputLen)
-            var width = convertToDouble(inputWidth)
-            var height = convertToDouble(inputHeight)
+            val length = convertToDouble(inputLen)
+            val width = convertToDouble(inputWidth)
+            val height = convertToDouble(inputHeight)
 
             if (length == null){
                 isInvalidDouble = true
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
             }
 
             if(!isEmptyFields && !isInvalidDouble){
-                var volume = height!! * length!! * length
+                val volume = height!! * length!! * length
                 tvResult.text = volume.toString()
             }
         }
