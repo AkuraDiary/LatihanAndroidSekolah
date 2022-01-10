@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">LatihanActivity</string>
-    <string name="txt_panjang">Panjang</string>
-    <string name="txt_lebar">Lebar</string>
-</resources>
