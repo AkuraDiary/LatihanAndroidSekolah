@@ -2,6 +2,7 @@ package com.example.latihanactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Button
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         edtLength = findViewById(R.id.edt_length)
         btnCalculate = findViewById(R.id.btn_calculate)
         tvResult = findViewById(R.id.tv_result)
+
+        btnCalculate.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -68,10 +71,15 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
             }
 
             if(!isEmptyFields && !isInvalidDouble){
-                val volume = height!! * length!! * length
+                val volume = height!!.toDouble() * length!!.toDouble() * length.toDouble()
                 tvResult.text = volume.toString()
             }
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(STATE_RESULT, tvResult.text.toString())
     }
 
     private fun convertToDouble(str: String):Double?{
@@ -80,5 +88,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         }catch (e : NumberFormatException){
             null
         }
+    }
+
+    companion object{
+        private const val STATE_RESULT = "state_result"
     }
 }
