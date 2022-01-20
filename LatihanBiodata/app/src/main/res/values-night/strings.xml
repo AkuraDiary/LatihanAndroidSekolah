@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LatihanBiodata</string>
     <string name="txt_nama">Nama : </string>
     <string name="txt_ttl">TTL : </string>
     <string name="txt_alamat">Alamat :</string>

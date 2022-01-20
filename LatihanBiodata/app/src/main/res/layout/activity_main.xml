@@ -1,18 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/txt_nama"
+        android:textSize="24sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"/>
+    <EditText
+        android:id="@+id/edt_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:lines="1"
+        android:minHeight="48dp"
+        android:autofillHints="Nama anda"
+        android:inputType="text"
+        tools:ignore="LabelFor" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_ttl"
+        android:textSize="24sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"/>
+    <EditText
+        android:id="@+id/edt_ttl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:lines="1"
+        android:minHeight="48dp"
+        android:autofillHints="TTL anda"
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_alamat"
+        android:textSize="26sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"/>
+    <EditText
+        android:id="@+id/edt_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:lines="1"
+        android:minHeight="48dp"
+        android:autofillHints="alamat anda"
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_kelas"
+        android:textSize="24sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"/>
+    <EditText
+        android:id="@+id/edt_kelas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:lines="1"
+        android:minHeight="48dp"
+        android:autofillHints="kelas anda"
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_hobi"
+        android:textSize="24sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"/>
+    <EditText
+        android:id="@+id/edt_hobi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:lines="1"
+        android:minHeight="48dp"
+        android:autofillHints="alamat anda"
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+
+
+</LinearLayout>
