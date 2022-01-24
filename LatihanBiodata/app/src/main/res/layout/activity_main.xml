@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/txt_nama"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="24dp"/>
     <EditText
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/txt_ttl"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"/>
     <EditText
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/txt_alamat"
-        android:textSize="26sp"
+        android:textSize="20sp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"/>
     <EditText
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/txt_kelas"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"/>
     <EditText
@@ -83,7 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/txt_hobi"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"/>
     <EditText
@@ -97,6 +97,11 @@
         android:inputType="text"
         tools:ignore="LabelFor" />
 
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/txt_simpan"
+        android:padding="10dp"/>
 
 </LinearLayout>
