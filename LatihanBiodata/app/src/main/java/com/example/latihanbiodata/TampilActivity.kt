@@ -10,6 +10,7 @@ class TampilActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTampilBinding.inflate(layoutInflater)
+        supportActionBar?.title = "Tampil Biodata"
         setContentView(binding.root)
 
     }

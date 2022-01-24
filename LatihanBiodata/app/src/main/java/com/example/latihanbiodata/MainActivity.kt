@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.title = "Input Biodata"
         binding.btnSimpan.setOnClickListener(this)
     }
 

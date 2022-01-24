@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".TampilActivity">
+    
+    <TextView
+        android:id="@+id/tampil_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tampil_nama"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_margin="10dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tampil_ttl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tampil_ttl"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/tampil_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tampil_alamat"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/tampil_kelas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tampil_kelas"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/tampil_hobi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tampil_hobi"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>
