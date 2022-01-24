@@ -2,6 +2,7 @@ package com.example.latihanbiodata
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import com.example.latihanbiodata.databinding.ActivityMainBinding
 
@@ -17,6 +18,42 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-        TODO("Not yet implemented")
+        if(view?.id == R.id.btn_simpan){
+            val nama = binding.edtNama.text.trim()
+            val ttl = binding.edtTtl.text.trim()
+            val alamat = binding.edtAlamat.text.trim()
+            val kelas = binding.edtKelas.text.trim()
+            val hobi = binding.edtHobi.text.trim()
+
+            when{
+                TextUtils.isEmpty(nama) -> {
+                    binding.edtNama.error = "Field ini tidak boleh kosong"
+                }
+                TextUtils.isEmpty(ttl) -> {
+                binding.edtTtl.error = "Field ini tidak boleh kosong"
+                }
+
+                TextUtils.isEmpty(alamat) -> {
+                    binding.edtAlamat.error = "Field ini tidak boleh kosong"
+                }
+
+                TextUtils.isEmpty(kelas) -> {
+                    binding.edtKelas.error = "Field ini tidak boleh kosong"
+                }
+
+                TextUtils.isEmpty(hobi) -> {
+                    binding.edtHobi.error = "Field ini tidak boleh kosong"
+                }
+
+            }
+        }
     }
 }
+
+
+
+
+
+
+
+
