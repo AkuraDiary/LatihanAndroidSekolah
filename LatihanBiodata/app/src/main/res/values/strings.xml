@@ -6,9 +6,9 @@
     <string name="txt_kelas">Kelas :</string>
     <string name="txt_hobi">Hobi :</string>
     <string name="txt_simpan">simpan</string>
-    <string name="tampil_nama">Nama : %1s$</string>
-    <string name="tampil_ttl">TTL : %1s$</string>
-    <string name="tampil_alamat">Alamat : %1s$</string>
-    <string name="tampil_kelas">Kelas : %1s$</string>
-    <string name="tampil_hobi">Hobi : %1s$</string>
+    <string name="tampil_nama">Nama : %1$s</string>
+    <string name="tampil_ttl">TTL : %1s</string>
+    <string name="tampil_alamat">Alamat : %1s</string>
+    <string name="tampil_kelas">Kelas : %1s</string>
+    <string name="tampil_hobi">Hobi : %1s</string>
 </resources>

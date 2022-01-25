@@ -48,11 +48,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                 else -> {
                     val intent = Intent(this, TampilActivity::class.java)
-                    intent.putExtra(TampilActivity.EXTRA_NAME, nama)
-                    intent.putExtra(TampilActivity.EXTRA_TTL, ttl)
-                    intent.putExtra(TampilActivity.EXTRA_ALAMAT, alamat)
-                    intent.putExtra(TampilActivity.EXTRA_KELAS, kelas)
-                    intent.putExtra(TampilActivity.EXTRA_HOBI, hobi)
+                    intent.putExtra(TampilActivity.EXTRA_NAME, nama.toString())
+                    intent.putExtra(TampilActivity.EXTRA_TTL, ttl.toString())
+                    intent.putExtra(TampilActivity.EXTRA_ALAMAT, alamat.toString())
+                    intent.putExtra(TampilActivity.EXTRA_KELAS, kelas.toString())
+                    intent.putExtra(TampilActivity.EXTRA_HOBI, hobi.toString())
                     startActivity(intent)
                 }
             }

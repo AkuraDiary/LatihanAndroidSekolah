@@ -20,11 +20,11 @@ class TampilActivity : AppCompatActivity() {
         val hobi = intent.getStringExtra(EXTRA_HOBI)
 
         binding.apply {
-            tampilNama.text = String.format(getString(R.string.tampil_nama), nama)
-            tampilTtl.text = String.format(getString(R.string.tampil_ttl), ttl)
-            tampilKelas.text = String.format(getString(R.string.tampil_kelas), kelas)
-            tampilAlamat.text = String.format(getString(R.string.tampil_alamat), alamat)
-            tampilHobi.text = String.format(getString(R.string.tampil_hobi), hobi)
+            tampilNama.text = getString(R.string.tampil_nama, nama)
+            tampilTtl.text = getString(R.string.tampil_ttl, ttl)
+            tampilKelas.text = getString(R.string.tampil_kelas, kelas)
+            tampilAlamat.text = getString(R.string.tampil_alamat, alamat)
+            tampilHobi.text = getString(R.string.tampil_hobi, hobi)
         }
     }
 
