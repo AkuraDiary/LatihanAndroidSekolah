@@ -1,5 +1,6 @@
 package com.example.latihanbiodata
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -45,6 +46,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     binding.edtHobi.error = "Field ini tidak boleh kosong"
                 }
 
+                else -> {
+                    val intent = Intent(this, TampilActivity::class.java)
+                    intent.putExtra(TampilActivity.EXTRA_NAME, nama)
+                    intent.putExtra(TampilActivity.EXTRA_TTL, ttl)
+                    intent.putExtra(TampilActivity.EXTRA_ALAMAT, alamat)
+                    intent.putExtra(TampilActivity.EXTRA_KELAS, kelas)
+                    intent.putExtra(TampilActivity.EXTRA_HOBI, hobi)
+                    startActivity(intent)
+                }
             }
         }
     }
