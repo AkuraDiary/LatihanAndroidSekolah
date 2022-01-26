@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     binding.edtNama.error = "Field ini tidak boleh kosong"
                 }
                 TextUtils.isEmpty(ttl) -> {
-                binding.edtTtl.error = "Field ini tidak boleh kosong"
+                    binding.edtTtl.error = "Field ini tidak boleh kosong"
                 }
 
                 TextUtils.isEmpty(alamat) -> {
