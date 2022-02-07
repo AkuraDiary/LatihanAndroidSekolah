@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         setContentView(binding.root)
 
         val btnMoveActivity = binding.btnMoveActivity
+        val btnMoveWithDataActivity = binding.btnMoveActivityData
+
+        btnMoveWithDataActivity.setOnClickListener(this)
         btnMoveActivity.setOnClickListener(this)
     }
 
@@ -22,6 +25,10 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
             R.id.btn_move_activity -> {
                 val moveIntent = Intent(this@MainActivity, MoveActivity::class.java)
                 startActivity(moveIntent)
+            }
+
+            R.id.btn_move_activity_data ->{
+
             }
 
         }
