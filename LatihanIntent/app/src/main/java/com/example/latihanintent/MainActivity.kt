@@ -1,6 +1,7 @@
 package com.example.latihanintent
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,7 +16,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
 
         val btnMoveActivity = binding.btnMoveActivity
         val btnMoveWithDataActivity = binding.btnMoveActivityData
+        val btnDialNumber = binding.btnDialNumber
 
+        btnDialNumber.setOnClickListener(this)
         btnMoveWithDataActivity.setOnClickListener(this)
         btnMoveActivity.setOnClickListener(this)
     }
@@ -34,6 +37,11 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
                 startActivity(moveWithDataIntent)
             }
 
+            R.id.btn_dial_number -> {
+                val phoneNumber = "081210841382"
+                val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                startActivity(dialPhoneIntent)
+            }
         }
     }
 }
