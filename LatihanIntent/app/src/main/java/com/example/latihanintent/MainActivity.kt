@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
             }
 
             R.id.btn_dial_number -> {
-                val phoneNumber = "081210841382"
+                val phoneNumber = "081214747968"
                 val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(dialPhoneIntent)
             }
