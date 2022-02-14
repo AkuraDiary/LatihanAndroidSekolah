@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
                 val moveWithDataIntent = Intent(this@MainActivity, MoveWithDataActivity::class.java)
                 moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_NAME, "DicodingAcademy Boy")
                 moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_AGE, 5)
+
+                moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_NAME_DUA, "Seta")
+                moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_AGE_DUA, 17)
                 startActivity(moveWithDataIntent)
             }
 

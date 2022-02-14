@@ -15,7 +15,11 @@ class MoveWithDataActivity : AppCompatActivity() {
 
         val name = intent.getStringExtra(EXTRA_NAME)
         val age = intent.getIntExtra(EXTRA_AGE, 0)
-        val text = "Name : $name, \nYour Age : $age"
+
+        val name2 = intent.getStringExtra(EXTRA_NAME_DUA)
+        val age2 = intent.getIntExtra(EXTRA_AGE_DUA, 0)
+
+        val text = "Name1 : $name, \nYour Age : $age \nName2 : $name2, \nAges : $age2"
         tvDataRecieved.text = text
     }
 
@@ -23,5 +27,7 @@ class MoveWithDataActivity : AppCompatActivity() {
     companion object{
         const val EXTRA_AGE = "extra_age"
         const val EXTRA_NAME = "extra_name"
+        const val EXTRA_NAME_DUA = "nama lagi"
+        const val EXTRA_AGE_DUA = "umur lagi"
     }
 }
