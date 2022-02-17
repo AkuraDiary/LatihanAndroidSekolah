@@ -1,17 +1,8 @@
 # LatihanAndroidSekolah
 repository untuk  latihan android di sekolah
 
-> # Latihan Biodata
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_biodata1.png)
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_biodata2.png)
-
-> # Latihan Intent
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan%20_latihan_intent1.png)
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan%20_latihan_intent2.png)
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan%20_latihan_intent3.png)
-
-> # Latihan Layout
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan%20_latihan_layout1.png)
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan%20_latihan_layout2.png)
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan%20_latihan_layout3.png)
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan%20_latihan_layout4.png)
+## Screenshoots can be found here
+- [LatihanActivity](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanActivity.md)
+- [LatihanBiodata](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanBiodata.md)
+- [LatihanIntent](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanIntent.md)
+- [LatihanLayout](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanLayout.md)
