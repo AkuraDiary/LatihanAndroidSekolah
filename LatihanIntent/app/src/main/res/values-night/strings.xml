@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="object_received">Object Diterima</string>
+    <string name="txt_move_objct">Pindah Activity dengan object</string>
+</resources>

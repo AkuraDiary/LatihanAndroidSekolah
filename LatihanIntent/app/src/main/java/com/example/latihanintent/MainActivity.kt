@@ -17,10 +17,12 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         val btnMoveActivity = binding.btnMoveActivity
         val btnMoveWithDataActivity = binding.btnMoveActivityData
         val btnDialNumber = binding.btnDialNumber
+        val btnMoveObject = binding.btnMoveActivityObject
 
         btnDialNumber.setOnClickListener(this)
         btnMoveWithDataActivity.setOnClickListener(this)
         btnMoveActivity.setOnClickListener(this)
+        btnMoveObject.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -44,6 +46,18 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
                 val phoneNumber = "081214747968"
                 val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(dialPhoneIntent)
+            }
+
+            R.id.btn_move_activity_object -> {
+                val person = Person(
+                    "DicodingAcademy",
+                    5,
+                    "academy@dicoding.com",
+                    "Bandung"
+                )
+                val moveWithObjectIntent = Intent(this@MainActivity, MoveWithObjectActivity::class.java)
+                moveWithObjectIntent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, person)
+                startActivity(moveWithObjectIntent)
             }
         }
     }

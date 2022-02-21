@@ -5,4 +5,6 @@
     <string name="dial_number">Dial a Number</string>
     <string name="data_received">Data Diterima</string>
     <string name="this_is_moveactivity">Ini MoveActivity</string>
+    <string name="object_received">Object Diterima</string>
+    <string name="txt_move_objct">Pindah Activity dengan object</string>
 </resources>
