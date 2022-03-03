@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LatihanIntroSlider</string>
+    <string name="skip_txt">SKIP</string>
+    <string name="ok_txt">OK</string>
 </resources>
