@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_round"
-            android:text="OK"
+            android:text="@string/ok_txt"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -55,7 +55,7 @@
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SKIP"
+            android:text="@string/skip_txt"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
