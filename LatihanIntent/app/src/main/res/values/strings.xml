@@ -7,4 +7,10 @@
     <string name="this_is_moveactivity">Ini MoveActivity</string>
     <string name="object_received">Object Diterima</string>
     <string name="txt_move_objct">Pindah Activity dengan object</string>
+    <string name="choose_number">Pilih angka yang kamu suka</string>
+    <string name="_50">50</string>
+    <string name="_100">100</string>
+    <string name="_150">150</string>
+    <string name="_200">200</string>
+    <string name="choose">PILIH</string>
 </resources>
