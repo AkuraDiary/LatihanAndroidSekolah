@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        tvResult = binding.tvResult
+
         val btnMoveActivity = binding.btnMoveActivity
         val btnMoveWithDataActivity = binding.btnMoveActivityData
         val btnDialNumber = binding.btnDialNumber
