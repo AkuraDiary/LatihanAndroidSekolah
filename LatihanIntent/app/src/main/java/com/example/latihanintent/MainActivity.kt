@@ -5,10 +5,24 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.latihanintent.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() , View.OnClickListener{
     private lateinit var binding : ActivityMainBinding
+
+    private lateinit var tvResult: TextView
+    private val resultLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == MoveForResultActivity.RESULT_CODE && result.data != null) {
+            val selectedValue =
+                result.data?.getIntExtra(MoveForResultActivity.EXTRA_SELECTED_VALUE, 0)
+            tvResult.text = "Hasil : $selectedValue"
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -18,11 +32,13 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         val btnMoveWithDataActivity = binding.btnMoveActivityData
         val btnDialNumber = binding.btnDialNumber
         val btnMoveObject = binding.btnMoveActivityObject
+        val btnMoveForResult = binding.btnMoveForResult
 
         btnDialNumber.setOnClickListener(this)
         btnMoveWithDataActivity.setOnClickListener(this)
         btnMoveActivity.setOnClickListener(this)
         btnMoveObject.setOnClickListener(this)
+        btnMoveForResult.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -58,6 +74,12 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
                 val moveWithObjectIntent = Intent(this@MainActivity, MoveWithObjectActivity::class.java)
                 moveWithObjectIntent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, person)
                 startActivity(moveWithObjectIntent)
+            }
+
+            R.id.btn_move_for_result -> {
+
+                val moveForResultIntent = Intent(this@MainActivity, MoveForResultActivity::class.java)
+                resultLauncher.launch(moveForResultIntent)
             }
         }
     }
