@@ -1,4 +1,4 @@
 ## Latihan ViewGroup
 
 > # SS Latihan View Group
-![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan%20_latihan_intent1.png)
+![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_latihan_viewGroup1.png)
