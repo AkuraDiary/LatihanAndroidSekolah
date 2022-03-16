@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.asthiseta.myrecyclerview.adapter.ListHeroAdapter
+import com.asthiseta.myrecyclerview.model.Hero
+import com.asthiseta.myrecyclerview.model.HeroesData
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvHeroes: RecyclerView

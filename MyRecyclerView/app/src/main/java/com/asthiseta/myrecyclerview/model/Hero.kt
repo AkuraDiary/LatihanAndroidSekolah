@@ -1,4 +1,4 @@
-package com.asthiseta.myrecyclerview
+package com.asthiseta.myrecyclerview.model
 
 data class Hero(
     var name: String = "",
