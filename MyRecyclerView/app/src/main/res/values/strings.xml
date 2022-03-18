@@ -5,4 +5,6 @@
     <string name="txt_with_cardview">with CardView</string>
     <string name="txt_grid">Grid</string>
     <string name="txt_list">List</string>
+    <string name="share">Share</string>
+    <string name="favorite">Favorite</string>
 </resources>
