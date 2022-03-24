@@ -7,3 +7,4 @@ repository untuk  latihan android di sekolah
 - [LatihanIntent](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanIntent.md)
 - [LatihanLayout](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanLayout.md)
 - [LatihanViewGroup](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanView.md)
+- [LatihanRecyclerView](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanRecycler.md)
