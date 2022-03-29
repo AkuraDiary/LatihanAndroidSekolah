@@ -31,18 +31,21 @@ class MainActivity : AppCompatActivity() {
         rvHeroes.layoutManager = LinearLayoutManager(this)
         val listHeroAdapter = ListHeroAdapter(list)
         rvHeroes.adapter = listHeroAdapter
+        supportActionBar?.title = getString(R.string.txt_list)
     }
 
     private fun showRecyclerGrid(){
         rvHeroes.layoutManager = GridLayoutManager(this, 2)
         val gridHeroAdapter = GridHeroAdapter(list)
         rvHeroes.adapter = gridHeroAdapter
+        supportActionBar?.title = getString(R.string.txt_grid)
     }
 
     private fun showRecyclerCardView() {
         rvHeroes.layoutManager = LinearLayoutManager(this)
         val cardViewHeroAdapter = CardViewHeroAdapter(list)
         rvHeroes.adapter = cardViewHeroAdapter
+        supportActionBar?.title = getString(R.string.txt_with_cardview)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
