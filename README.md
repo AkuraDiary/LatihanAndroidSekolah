@@ -15,6 +15,8 @@ repository untuk  latihan android di sekolah
 <details>
   <summary>Latihan Biodata</summary>
   
+  ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_biodata1.png)
+  ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_biodata2.png)
 </details>
 
 
