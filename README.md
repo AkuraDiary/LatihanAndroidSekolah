@@ -55,11 +55,11 @@ repository untuk  latihan android di sekolah
   ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_recyclerviewGrid.png)
 </details>
 <!--
-- [LatihanActivity](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanActivity.md)
-- [LatihanBiodata](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanBiodata.md)
-- [LatihanIntent](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanIntent.md)
-- [LatihanLayout](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanLayout.md)
-- [LatihanViewGroup](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanView.md)
-- [LatihanRecyclerView](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/latihanRecycler.md)
+<details>
+  <summary>Latihan [nama latihan</summary>
+  
+  ![ssan](link bois)
+
+</details>
 
 -->
