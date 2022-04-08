@@ -25,5 +25,5 @@ class ViewPagerAdapter (private val mContext: Context, fm: FragmentManager) :
         @StringRes
         private val TAB_TITLES = intArrayOf(R.string.tab_text_1,
             R.string.tab_text_2)
-    } {
-}
+    }
+    }
