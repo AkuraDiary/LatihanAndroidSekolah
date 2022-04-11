@@ -6,6 +6,6 @@
     <string name="masukkan_nama_hint">Masukkan Nama</string>
     <string name="user_display_name">User Display Name</string>
     <string name="selamat_datang">Selamat datang</string>
-    <string name="tab_text_2">Tampil</string>
-    <string name="tab_text_1">Form</string>
+    <string name="tab_text_2">Daftar</string>
+    <string name="tab_text_1">Profile</string>
 </resources>
