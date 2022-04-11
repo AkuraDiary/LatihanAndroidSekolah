@@ -23,7 +23,7 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_first,
+        return inflater.inflate(R.layout.fragment_form,
             container, false)
     }
     override fun onViewCreated(view: View,

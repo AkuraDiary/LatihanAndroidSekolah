@@ -8,4 +8,6 @@
     <string name="selamat_datang">Selamat datang</string>
     <string name="tab_text_2">Daftar</string>
     <string name="tab_text_1">Profile</string>
+    <string name="masukkan_alamat_hint">masukkan alamat</string>
+    <string name="masukkan_nomor_telp_hint">masukkan nomor telp</string>
 </resources>
