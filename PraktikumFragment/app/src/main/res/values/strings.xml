@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PraktikumFragment</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="masukkan_nama_hint">Masukkan Nama</string>
+    <string name="user_display_name">User Display Name</string>
+    <string name="selamat_datang">Selamat datang</string>
+    <string name="tab_text_2">Tampil</string>
+    <string name="tab_text_1">Form</string>
 </resources>
