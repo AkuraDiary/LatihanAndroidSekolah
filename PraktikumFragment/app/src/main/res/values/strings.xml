@@ -6,8 +6,8 @@
     <string name="masukkan_nama_hint">Masukkan Nama</string>
     <string name="user_display_name">User Display Name</string>
     <string name="selamat_datang">Selamat datang</string>
-    <string name="tab_text_2">Daftar</string>
-    <string name="tab_text_1">Profile</string>
+    <string name="tab_text_2">Profile</string>
+    <string name="tab_text_1">Daftar</string>
     <string name="masukkan_alamat_hint">masukkan alamat</string>
     <string name="masukkan_nomor_telp_hint">masukkan nomor telp</string>
 </resources>
