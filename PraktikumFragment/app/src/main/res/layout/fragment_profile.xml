@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
+
     <ImageView
         android:id="@+id/pp_fragment2"
         android:layout_width="72dp"
@@ -15,11 +15,12 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:contentDescription="pp user"
         android:src="@drawable/user_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="pp user" />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="0dp"
@@ -37,6 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:text="Haloo Dunia!" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
@@ -48,4 +50,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pp_fragment2" />
+
+
+    <TextView
+        android:id="@+id/textViewNoTelp"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:hint="Nomor Telepon"
+        android:textColor="#FA4A0C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        tools:text="085736041408" />
+
+    <TextView
+        android:id="@+id/textViewAlamat"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:hint="Alamat"
+        android:textColor="#FA4A0C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNoTelp"
+        tools:text="Kota Malang" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
