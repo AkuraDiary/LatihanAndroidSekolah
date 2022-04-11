@@ -16,22 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        /*
-        def githubProperties = new Properties()
-        githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
-        maven {
-            name = "GitHubPackages"
-
-            url = uri("https://maven.pkg.github.com/Cuberto/liquid-swipe-android")
-            credentials {
-                username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
-                password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
-            }
-        }
-        */
         maven {
             url "https://maven.google.com/"
         }
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "PraktikumFragment"
