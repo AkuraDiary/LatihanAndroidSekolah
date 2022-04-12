@@ -12,6 +12,9 @@ import androidx.lifecycle.ViewModelProviders
 class SecondFragment : Fragment() {
     private var myViewModel: MyViewModel? = null
     private var txtName: TextView? = null
+    private var txtAlamat: TextView? = null
+    private var txtTelp: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         myViewModel = ViewModelProviders.of(requireActivity()).get(MyViewModel::class.java)
@@ -26,8 +29,27 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         txtName = view.findViewById(R.id.textViewName)
-        myViewModel!!.name.observe(requireActivity(),
-            Observer { s -> txtName!!.text = s })
+        txtAlamat = view.findViewById(R.id.textViewAlamat)
+        txtTelp = view.findViewById(R.id.textViewNoTelp)
+
+        myViewModel!!.apply {
+            name.observe(requireActivity()
+            ) { s -> txtName!!.text = s }
+
+            alamat.observe(requireActivity()
+            ) { s -> txtAlamat!!.text = s }
+
+            telp.observe(requireActivity()
+            ) { s -> txtTelp!!.text = s }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        myViewModel!!.name.removeObservers(requireActivity())
+        txtAlamat = null
+        txtName = null
+        txtTelp = null
     }
     companion object {
         fun newInstance(): SecondFragment {
