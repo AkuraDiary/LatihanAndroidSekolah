@@ -62,6 +62,23 @@ repository untuk  latihan android di sekolah
   ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_latihanFragment2.png)
 
 </details>
+
+<details>
+  <summary>Latihan Fragment</summary>
+  
+  ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_latihanFragment1.png)
+  ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_latihanFragment2.png)
+
+</details>
+<details>
+  <summary>Praktikum Fragment</summary>
+  
+  ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_praktikumFragment1.png)
+  ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_praktikumFragment1setengah.png)
+  ![ssan](https://github.com/AkuraDiary/LatihanAndroidSekolah/blob/main/ssan/ssan_praktikumFragment2.png)
+
+</details>
+
 <!--
 <details>
   <summary>Latihan [nama latihan</summary>
