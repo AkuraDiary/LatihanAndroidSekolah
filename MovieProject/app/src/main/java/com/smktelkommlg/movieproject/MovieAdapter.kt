@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import butterknife.ButterKnife
 import com.bumptech.glide.Glide
+import retrofit2.Call
 
 
 class MovieAdapter(private val listMovies : ArrayList<SearchItem>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
@@ -33,7 +34,7 @@ class MovieAdapter(private val listMovies : ArrayList<SearchItem>) : RecyclerVie
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(listMovies: ArrayList<SearchItem>) {
+    fun setData(listMovies: Call<MovieService>) {
         this.listMovies.clear()
         this.listMovies.addAll(listMovies)
         notifyDataSetChanged()
