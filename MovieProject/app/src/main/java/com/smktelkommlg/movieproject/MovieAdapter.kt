@@ -7,7 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+
+class MovieAdapter(private val listMovies : ArrayList<SearchItem>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         LayoutInflater.from(parent.context).inflate(R.layout.movie_adapter, parent, false)
