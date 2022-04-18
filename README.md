@@ -79,6 +79,14 @@ repository untuk  latihan android di sekolah
 
 </details>
 
+<details>
+  <summary>Latihan SQLite</summary>
+  
+  #coming soon bois
+  ![ssan](coming soon bois)
+
+</details>
+
 <!--
 <details>
   <summary>Latihan [nama latihan</summary>
