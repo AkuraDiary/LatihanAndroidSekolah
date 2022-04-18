@@ -1,3 +1,5 @@
+package com.smktelkommlg.movieproject
+
 @Parcelize
 data class MovieResponse(
 	val response: String? = null,
