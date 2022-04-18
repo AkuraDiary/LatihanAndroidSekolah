@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import butterknife.ButterKnife
+import com.bumptech.glide.Glide
 
 
 class MovieAdapter(private val listMovies : ArrayList<SearchItem>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
@@ -16,14 +18,22 @@ class MovieAdapter(private val listMovies : ArrayList<SearchItem>) : RecyclerVie
     }
 
     override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return listMovies.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        holder.title_view.text = listMovies[position].title
+        holder.genre_view.text = listMovies[position].type
+        holder.release_view.text = listMovies[position].year
+
+        Glide.with(holder.itemView.context)
+            .load(listMovies[position].poster)
+            .into(holder.img_poster)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+
         val img_poster : ImageView = itemView.findViewById(R.id.img_poster)
         val title_view : TextView = itemView.findViewById(R.id.title_view)
         val release_view : TextView = itemView.findViewById(R.id.realesed_view)
