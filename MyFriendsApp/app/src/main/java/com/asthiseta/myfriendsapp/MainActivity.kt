@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    private fun tampilMyFriendsAddFragment() {
+    fun tampilMyFriendsAddFragment() {
         gantiFragment(
             supportFragmentManager,
             MyFriendsAddFragment.newInstance(), R.id.contentFrame)
