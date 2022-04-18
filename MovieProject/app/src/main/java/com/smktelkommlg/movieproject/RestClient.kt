@@ -4,7 +4,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RestClient {
+object RestClient {
     fun getMovieService(): MovieService {
         val client = OkHttpClient.Builder().build()
         val retrofit = Retrofit.Builder()

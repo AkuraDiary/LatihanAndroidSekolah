@@ -1,5 +1,6 @@
 package com.smktelkommlg.movieproject
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,6 +30,13 @@ class MovieAdapter(private val listMovies : ArrayList<SearchItem>) : RecyclerVie
         Glide.with(holder.itemView.context)
             .load(listMovies[position].poster)
             .into(holder.img_poster)
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(listMovies: ArrayList<SearchItem>) {
+        this.listMovies.clear()
+        this.listMovies.addAll(listMovies)
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

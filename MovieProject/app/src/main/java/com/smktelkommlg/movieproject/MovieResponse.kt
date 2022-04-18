@@ -8,5 +8,5 @@ import kotlinx.parcelize.Parcelize
 data class MovieResponse(
     val response: String? = null,
     val totalResults: String? = null,
-    val search: List<SearchItem?>? = null
+    val search: List<SearchItem>? = null
 ) : Parcelable
