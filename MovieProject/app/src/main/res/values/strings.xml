@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MovieProject</string>
+    <string name="judul_txt">Judul</string>
+    <string name="view_txt">2000</string>
+    <string name="genre_txt">Action</string>
 </resources>
