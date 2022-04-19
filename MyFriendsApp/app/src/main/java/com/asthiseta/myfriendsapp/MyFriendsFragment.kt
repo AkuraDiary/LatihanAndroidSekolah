@@ -11,18 +11,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class MyFriendsFragment : Fragment() {
 
     var fab_btn: FloatingActionButton? = null
-    var btn_save: Button? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        fab_btn = activity?.findViewById(R.id.fabAddFriend)
-        btn_save = activity?.findViewById(R.id.btnSave)
-        fab_btn?.setOnClickListener {
-            (activity as MainActivity).tampilMyFriendsAddFragment()
-        }
-        btn_save?.setOnClickListener {
-            (activity as MainActivity).tampilMyFriendsFragment()
-        }
-        super.onCreate(savedInstanceState)
-    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,13 +29,18 @@ class MyFriendsFragment : Fragment() {
     }
 
     private fun initView() {
-        TODO("Not yet implemented")
+        fab_btn = activity?.findViewById(R.id.fabAddFriend)
+
+        fab_btn?.setOnClickListener {
+            (activity as MainActivity).tampilMyFriendsAddFragment()
+        }
+
     }
 
     override fun onDestroy() {
         super.onDestroy()
         fab_btn = null
-        btn_save = null
+
     }
 
     companion object {
