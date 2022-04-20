@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 
 class MyFriendsAddFragment : Fragment(){
 
-    var btn_save: Button? = null
+    private var btn_save: Button? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
