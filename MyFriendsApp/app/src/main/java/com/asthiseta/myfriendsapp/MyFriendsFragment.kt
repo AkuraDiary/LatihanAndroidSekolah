@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.asthiseta.myfriendsapp.adapter.MyFriendAdapter
 import com.asthiseta.myfriendsapp.model.MyFriend
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -13,6 +14,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class MyFriendsFragment : Fragment() {
 
     private var fab_btn: FloatingActionButton? = null
+    private var listMyFriends: RecyclerView? = null
     lateinit var listTeman: MutableList<MyFriend>
 
     override fun onCreateView(
@@ -49,6 +51,7 @@ class MyFriendsFragment : Fragment() {
 
     private fun initView() {
         fab_btn = activity?.findViewById(R.id.fabAddFriend)
+        listMyFriends = activity?.findViewById(R.id.listMyFriends)
 
         fab_btn?.setOnClickListener {
             (activity as MainActivity).tampilMyFriendsAddFragment()
@@ -57,13 +60,17 @@ class MyFriendsFragment : Fragment() {
     }
 
     private fun tampilTeman(){
-        //listMyFriends.layoutManager = LinearLayoutManager(activity)
-        //listMyFriends.adapter = MyFriendAdapter(activity!!, listTeman)
+
+        listMyFriends?.layoutManager = LinearLayoutManager(activity)
+        listMyFriends?.adapter = MyFriendAdapter(requireActivity(),
+            listTeman as ArrayList<MyFriend>
+        )
     }
 
     override fun onDestroy() {
         super.onDestroy()
         fab_btn = null
+        listMyFriends = null
 
     }
 
