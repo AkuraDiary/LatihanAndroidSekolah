@@ -56,6 +56,8 @@ class MyFriendsFragment : Fragment() {
         fab_btn?.setOnClickListener {
             (activity as MainActivity).tampilMyFriendsAddFragment()
         }
+        simulasiDataTeman()
+        tampilTeman()
 
     }
 
