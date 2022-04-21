@@ -15,7 +15,7 @@ class MyFriendsFragment : Fragment() {
 
     private var fab_btn: FloatingActionButton? = null
     private var listMyFriends: RecyclerView? = null
-    lateinit var listTeman: MutableList<MyFriend>
+    private lateinit var listTeman: MutableList<MyFriend>
 
     override fun onCreateView(
         inflater: LayoutInflater,
