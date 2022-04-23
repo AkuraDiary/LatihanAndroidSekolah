@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 
-class MyFriendsAddFragment : Fragment(){
+class MyFriendsAddFragment : Fragment() {
 
     private var btn_save: Button? = null
     override fun onCreateView(

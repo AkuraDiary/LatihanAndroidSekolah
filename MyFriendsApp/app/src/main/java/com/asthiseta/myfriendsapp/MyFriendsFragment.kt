@@ -61,10 +61,11 @@ class MyFriendsFragment : Fragment() {
 
     }
 
-    private fun tampilTeman(){
+    private fun tampilTeman() {
 
         listMyFriends?.layoutManager = LinearLayoutManager(activity)
-        listMyFriends?.adapter = MyFriendAdapter(requireActivity(),
+        listMyFriends?.adapter = MyFriendAdapter(
+            requireActivity(),
             listTeman as ArrayList<MyFriend>
         )
     }
