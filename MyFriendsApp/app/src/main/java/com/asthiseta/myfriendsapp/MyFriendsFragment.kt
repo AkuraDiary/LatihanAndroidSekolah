@@ -37,13 +37,13 @@ class MyFriendsFragment : Fragment() {
 
         listTeman.add(
             MyFriend(
-                "Muhammad", "Laki-laki",
+                1, "Muhammad", "Laki-laki",
                 "ade@gmail.com", "085719004268", "Bandung"
             )
         )
         listTeman.add(
             MyFriend(
-                "Al Harits", "Laki-laki",
+                2, "Al Harits", "Laki-laki",
                 "rifaldi@gmail.com", "081213416171", "Bandung"
             )
         )
