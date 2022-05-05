@@ -118,6 +118,11 @@ class MyFriendsAddFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
+        db?.close()
+        edtName = null
+        edtEmail = null
+        edtTelp = null
+        edtAddress = null
         btn_save = null
         spinnerGender = null
     }
