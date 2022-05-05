@@ -49,6 +49,7 @@ class MyFriendsAddFragment : Fragment() {
     private fun initLocalDB() {
         db = AppDatabase.getAppDataBase(requireActivity())
         myFriendDao = db?.friendDao()
+        setDataSpinnerGender()
     }
 
     private fun setDataSpinnerGender() {
@@ -111,7 +112,8 @@ class MyFriendsAddFragment : Fragment() {
 
         btn_save = activity?.findViewById(R.id.btnSave)
         btn_save?.setOnClickListener {
-            (activity as MainActivity).tampilMyFriendsFragment()
+            validasiInput()
+            //(activity as MainActivity).tampilMyFriendsFragment()
         }
     }
 
