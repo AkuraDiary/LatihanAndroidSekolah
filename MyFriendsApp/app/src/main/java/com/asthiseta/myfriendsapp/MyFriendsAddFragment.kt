@@ -71,7 +71,7 @@ class MyFriendsAddFragment : Fragment() {
         alamatInput = edtAddress?.text.toString()
         genderInput = spinnerGender?.selectedItem.toString()
         when {
-            namaInput.isEmpty() -> edtName.error = "Nama tidak boleh kosong"
+            namaInput.isEmpty() -> edtName?.error = "Nama tidak boleh kosong"
 
                 genderInput.equals("Pilih kelamin") -> tampilToast("Kelamin harus dipilih")
 
@@ -103,6 +103,12 @@ class MyFriendsAddFragment : Fragment() {
 
     private fun initView() {
         spinnerGender = activity?.findViewById(R.id.spinnerGender)
+
+        edtName = activity?.findViewById(R.id.edtName)
+        edtEmail = activity?.findViewById(R.id.edtEmail)
+        edtTelp = activity?.findViewById(R.id.edtTelp)
+        edtAddress = activity?.findViewById(R.id.edtAddress)
+
         btn_save = activity?.findViewById(R.id.btnSave)
         btn_save?.setOnClickListener {
             (activity as MainActivity).tampilMyFriendsFragment()
