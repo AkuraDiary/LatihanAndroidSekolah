@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
+import android.widget.*
 import androidx.fragment.app.Fragment
 import com.asthiseta.myfriendsapp.database.AppDatabase
 import com.asthiseta.myfriendsapp.database.MyFriendsDao
@@ -94,7 +91,9 @@ class MyFriendsAddFragment : Fragment() {
         }
     }
 
-
+    private fun tampilToast(message: String) {
+        Toast.makeText(requireActivity(), message, Toast.LENGTH_SHORT).show()
+    }
     private fun tambahDataTeman(teman: MyFriend): Job {
         return GlobalScope.launch {
             myFriendDao?.tambahTeman(teman)
