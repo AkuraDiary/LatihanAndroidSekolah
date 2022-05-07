@@ -50,7 +50,6 @@ class MyFriendsFragment : Fragment() {
         fab_btn?.setOnClickListener {
             (activity as MainActivity).tampilMyFriendsAddFragment()
         }
-        //simulasiDataTeman()
         tampilTeman()
 
     }
@@ -66,7 +65,17 @@ class MyFriendsFragment : Fragment() {
 
     private fun ambilDataTeman() {
         listTeman = ArrayList()
-
+        myFriendDao?.ambilSemuaTeman()?.observe(requireActivity()) { r ->
+            listTeman = r.toMutableList()
+            when {
+                listTeman.isEmpty() -> {
+                    Toast.makeText(requireActivity(), "Belum Ada Data", Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    tampilTeman()
+                }
+            }
+        }
     }
     private fun tampilToast(message: String) {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
