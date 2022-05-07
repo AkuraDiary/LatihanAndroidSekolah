@@ -42,24 +42,7 @@ class MyFriendsFragment : Fragment() {
         db = AppDatabase.getAppDataBase(requireActivity())
         myFriendDao = db?.friendDao()
     }
-/*
-    private fun simulasiDataTeman() {
-        listTeman = ArrayList()
 
-        listTeman.add(
-            MyFriend(
-                1, "Muhammad", "Laki-laki",
-                "ade@gmail.com", "085719004268", "Bandung"
-            )
-        )
-        listTeman.add(
-            MyFriend(
-                2, "Al Harits", "Laki-laki",
-                "rifaldi@gmail.com", "081213416171", "Bandung"
-            )
-        )
-    }
-*/
     private fun initView() {
         fab_btn = activity?.findViewById(R.id.fabAddFriend)
         listMyFriends = activity?.findViewById(R.id.listMyFriends)
