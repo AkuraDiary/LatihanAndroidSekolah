@@ -1,5 +1,10 @@
 package com.asthiseta.myfriendsapp
 
+import android.app.DatePickerDialog
+import android.icu.text.DateFormat
+import android.icu.text.SimpleDateFormat
+import android.icu.util.Calendar
+import android.icu.util.ULocale
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +17,7 @@ import com.asthiseta.myfriendsapp.model.MyFriend
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import java.util.*
 
 class MyFriendsAddFragment : Fragment() {
     //variables
@@ -20,16 +26,19 @@ class MyFriendsAddFragment : Fragment() {
     private var telpInput: String = ""
     private var alamatInput: String = ""
     private var genderInput: String = ""
+    private var ttlInput: String = ""
     private var db: AppDatabase? = null
     private var myFriendDao: MyFriendsDao? = null
+    private var calendar = Calendar.getInstance()
 
     //views component
-    private var edtName : EditText? = null
-    private var edtEmail : EditText? = null
-    private var edtTelp : EditText? = null
-    private var edtAddress : EditText? = null
+    private var edtName: EditText? = null
+    private var edtEmail: EditText? = null
+    private var edtTelp: EditText? = null
+    private var edtAddress: EditText? = null
     private var btn_save: Button? = null
     private var spinnerGender: Spinner? = null
+    private var edtTTL: TextView? = null
 
 
     override fun onCreateView(
@@ -67,25 +76,26 @@ class MyFriendsAddFragment : Fragment() {
     private fun validasiInput() {
         namaInput = edtName?.text.toString()
         emailInput = edtEmail?.text.toString()
-
+        ttlInput = edtTTL?.text.toString()
         telpInput = edtTelp?.text.toString()
         alamatInput = edtAddress?.text.toString()
         genderInput = spinnerGender?.selectedItem.toString()
         when {
             namaInput.isEmpty() -> edtName?.error = "Nama tidak boleh kosong"
 
-                genderInput.equals("Pilih kelamin") -> tampilToast("Kelamin harus dipilih")
+            genderInput.equals("Pilih kelamin") -> tampilToast("Kelamin harus dipilih")
 
             emailInput.isEmpty() -> edtEmail?.error = "Email tidak boleh kosong"
 
-                telpInput.isEmpty() -> edtTelp?.error = "Telp tidak boleh kosong"
+            telpInput.isEmpty() -> edtTelp?.error = "Telp tidak boleh kosong"
 
-                alamatInput.isEmpty() -> edtAddress?.error = "Alamat tidak boleh kosong"
+            alamatInput.isEmpty() -> edtAddress?.error = "Alamat tidak boleh kosong"
+            ttlInput.isEmpty() -> edtTTL?.error = "Tanggal lahir tidak boleh kosong"
             else -> {
                 val teman = MyFriend(
                     nama = namaInput, kelamin =
                     genderInput, email = emailInput, telp = telpInput, alamat =
-                    alamatInput
+                    alamatInput, ttl = ttlInput
                 )
                 tambahDataTeman(teman)
             }
@@ -95,6 +105,7 @@ class MyFriendsAddFragment : Fragment() {
     private fun tampilToast(message: String) {
         Toast.makeText(requireActivity(), message, Toast.LENGTH_SHORT).show()
     }
+
     private fun tambahDataTeman(teman: MyFriend): Job {
         return GlobalScope.launch {
             myFriendDao?.tambahTeman(teman)
@@ -109,12 +120,45 @@ class MyFriendsAddFragment : Fragment() {
         edtEmail = activity?.findViewById(R.id.edtEmail)
         edtTelp = activity?.findViewById(R.id.edtTelp)
         edtAddress = activity?.findViewById(R.id.edtAddress)
+        edtTTL = activity?.findViewById(R.id.edtTTL)
 
         btn_save = activity?.findViewById(R.id.btnSave)
         btn_save?.setOnClickListener {
             validasiInput()
             //(activity as MainActivity).tampilMyFriendsFragment()
         }
+
+        // create an OnDateSetListener
+        val dateSetListener = object : DatePickerDialog.OnDateSetListener {
+            override fun onDateSet(
+                view: DatePicker, year: Int, monthOfYear: Int,
+                dayOfMonth: Int
+            ) {
+                calendar.set(Calendar.YEAR, year)
+                calendar.set(Calendar.MONTH, monthOfYear)
+                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                updateDateInView()
+            }
+        }
+        edtTTL?.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(view: View) {
+                DatePickerDialog(
+                    requireActivity(),
+                    dateSetListener,
+                    // set DatePickerDialog to point to today's date when it loads up
+                    calendar.get(Calendar.YEAR),
+                    calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH)
+                ).show()
+            }
+        })
+
+    }
+
+    private fun updateDateInView() {
+        edtTTL?.text =
+            SimpleDateFormat.getDateInstance(DateFormat.LONG, ULocale.forLocale(Locale.ENGLISH))
+                .format(calendar.time)
     }
 
 

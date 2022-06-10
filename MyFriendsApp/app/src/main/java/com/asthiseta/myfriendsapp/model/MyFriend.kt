@@ -12,5 +12,6 @@ data class MyFriend(
     val kelamin : String,
     val email : String,
     val telp: String,
-    val alamat: String
+    val alamat: String,
+    val ttl: String
 )

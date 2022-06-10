@@ -40,6 +40,17 @@
             android:textColor="#000000" />
 
         <EditText
+            android:id="@+id/edtTTL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TTL"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#CCCCCC"
+            android:drawableEnd="@drawable/ic_calendar"/>
+
+        <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
